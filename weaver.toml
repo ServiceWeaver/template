@@ -1,0 +1,21 @@
+# This is a Service Weaver config file, written in TOML. Different sections of
+# the config file configure various aspects of an application. See
+# https://serviceweaver.dev/docs#config-files for details.
+
+# The [serviceweaver] section is the only required section and configures the
+# basics of an application, including the binary to run, the command line
+# arguments to pass, and the environment variables to set.
+[serviceweaver]
+binary = "template"
+# args = ["put", "command", "line", "arguments", "here"]
+# env = ["PUT=foo", "ENV=bar", "VARS=baz", "HERE="]
+
+# The [single] section configures the behavior of the app when deployed via
+# `weaver single deploy`.
+[single]
+listeners.lis = {address="localhost:9000"}
+
+# The [multi] section configures the behavior of the app when deployed via
+# `weaver multi deploy`.
+[multi]
+listeners.lis = {address="localhost:9000"}
