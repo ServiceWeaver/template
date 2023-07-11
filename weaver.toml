@@ -11,11 +11,26 @@ binary = "template"
 # env = ["PUT=foo", "ENV=bar", "VARS=baz", "HERE="]
 
 # The [single] section configures the behavior of the app when deployed via
-# `weaver single deploy`.
+# `weaver single deploy`. See serviceweaver.dev/docs.html#single-process for
+# more information about the single process deployer.
 [single]
 listeners.lis = {address="localhost:9000"}
 
 # The [multi] section configures the behavior of the app when deployed via
-# `weaver multi deploy`.
+# `weaver multi deploy`. See serviceweaver.dev/docs.html#multiprocess for more
+# information about the multiprocess deployer.
 [multi]
 listeners.lis = {address="localhost:9000"}
+
+# The [kube] section configures the behavior of the app when deployed via
+# `weaver kube deploy`. See github.com/serviceweaver/weaver-kube for
+# more information about the kubernetes deployer.
+[kube]
+listeners.lis = {public = true}
+
+# The [gke] section configures the behavior of the app when deployed via
+# `weaver gke deploy`. See serviceweaver.dev/docs.html#gke for more information
+# about the GKE deployer.
+[gke]
+regions = ["us-west1"]
+listeners.lis = {public_hostname = "app.example.com"}
