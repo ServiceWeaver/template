@@ -27,6 +27,7 @@ listeners.lis = {address="localhost:9000"}
 # more information about the kubernetes deployer.
 [kube]
 listeners.lis = {public = true}
+image = "DOCKER_HUB_USERNAME/app" # see `weaver kube deploy --help` for details
 
 # The [gke] section configures the behavior of the app when deployed via
 # `weaver gke deploy`. See serviceweaver.dev/docs.html#gke for more information
