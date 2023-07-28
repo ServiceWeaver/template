@@ -5,6 +5,6 @@ you can use via `gonew`. This template will allow you to get started using
 Service Weaver more easily.
 
 ```
-$ go install rsc.io/tmp/gonew@latest
+$ go install golang.org/x/tools/cmd/gonew@latest
 $ gonew github.com/ServiceWeaver/template example.com/foo
 ```
