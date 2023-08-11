@@ -50,6 +50,6 @@ func serve(ctx context.Context, app *app) error {
 	http.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
 		fmt.Fprintln(w, "Hello, World!")
 	})
-	app.Logger().Info("Listening on...", "address", app.lis)
+	app.Logger(ctx).Info("Listening on...", "address", app.lis)
 	return http.Serve(app.lis, nil)
 }
